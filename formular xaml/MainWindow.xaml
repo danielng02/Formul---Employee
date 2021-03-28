@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:formular_xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
@@ -20,7 +21,7 @@
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
-        <Button Grid.Row="6" Grid.ColumnSpan="2">Submit</Button>
+        <Button Grid.Row="6" Grid.ColumnSpan="2" Click="Button_Click">Submit</Button>
 
         <Label Grid.Row="0" HorizontalAlignment="Center" FontSize="25">Name</Label>
         <Label Grid.Row="1" HorizontalAlignment="Center" FontSize="25">Surname</Label>
@@ -29,17 +30,17 @@
         <Label Grid.Row="4" HorizontalAlignment="Center" FontSize="25">Job</Label>
         <Label Grid.Row="5" HorizontalAlignment="Center" FontSize="25">Salary</Label>
 
-        <TextBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" FontSize="25" Width="600" ></TextBox>
-        <TextBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" FontSize="25" Width="600"></TextBox>
-        <TextBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" FontSize="25" Width="600"></TextBox>
-        <TextBox Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" FontSize="25" Width="600"></TextBox>
-        <TextBox Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" FontSize="25" Width="600"></TextBox>
+        <TextBox x:Name="name" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" FontSize="25" Width="600" ></TextBox>
+        <TextBox x:Name="surname" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" FontSize="25" Width="600"></TextBox>
+        <TextBox x:Name="year" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" FontSize="25" Width="600"></TextBox>
+        <TextBox x:Name="job" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" FontSize="25" Width="600"></TextBox>
+        <TextBox x:Name="salary" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" FontSize="25" Width="600"></TextBox>
 
-        <ComboBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" FontSize="25" Width="600">
+        <ComboBox x:Name="level" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" FontSize="25" Width="600">
             <ComboBoxItem>Základní</ComboBoxItem>
             <ComboBoxItem>Střední</ComboBoxItem>
             <ComboBoxItem>Vyšší</ComboBoxItem>
         </ComboBox>
-        
+
     </Grid>
 </Window>

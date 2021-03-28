@@ -24,6 +24,11 @@ namespace formular_xaml
         {
             InitializeComponent();
         }
+        List<Employee> list = new List<Employee>();
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            list.Add(new Employee(name.Text, surname.Text, Convert.ToInt32(year.Text), (Employee.education)level.SelectedIndex, job.Text, Convert.ToInt32(salary.Text)));
+        }
     }
     class Person
     {
@@ -54,4 +59,5 @@ namespace formular_xaml
             salary = Salary;
         }
     }
+
 }
